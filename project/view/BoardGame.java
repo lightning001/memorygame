@@ -3,9 +3,7 @@ package view;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Observable;
-import java.util.Random;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -16,6 +14,10 @@ import model.ButtonManagement;
 import model.LevelModel;
 
 public class BoardGame extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 184768325472894310L;
 	public int m;
 	public int n;
 	public LevelModel observableLevel;

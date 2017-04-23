@@ -1,14 +1,10 @@
 package controller;
 
 import java.awt.Color;
-import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JLayeredPane;
-
 import view.BoardGame;
-import view.NewGame;
 import view.Option;
 import view.Setting;
 import view.ShowMessage;

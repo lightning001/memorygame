@@ -6,12 +6,9 @@ import java.awt.Container;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JLayeredPane;
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
 
 import model.Sound;
 import view.HomeView;
@@ -134,7 +131,7 @@ public class HomeController implements MouseListener {
 
 	@Override
 	public void mouseExited(MouseEvent e) {
-		ImageIcon icon = new ImageIcon("images\\bt.png");
+//		ImageIcon icon = new ImageIcon("images\\bt.png");
 		if (e.getSource() == home.btnewgame) {
 			home.btnewgame.setForeground(Color.BLACK);
 			// home.btnewgame.setIcon(icon);

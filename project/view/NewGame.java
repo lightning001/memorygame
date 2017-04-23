@@ -1,8 +1,5 @@
 package view;
 
-import java.awt.Font;
-
-import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
 
 import controller.BoardGameController;
@@ -25,6 +22,7 @@ public class NewGame extends JLayeredPane {
 	Setting setting = new Setting();
 	
 
+	@SuppressWarnings("unused")
 	public NewGame(boolean isResume) {
 		setLayout(null);
 		setOpaque(false);

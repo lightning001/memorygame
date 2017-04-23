@@ -1,7 +1,5 @@
 package model;
 
-import view.BoardGame;
-
 public class BonusScore {
 	int subTime;
 	int bonus;

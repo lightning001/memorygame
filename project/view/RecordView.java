@@ -14,6 +14,10 @@ import javax.swing.SwingConstants;
 import model.ObserverTest;
 
 public class RecordView extends ObserverTest{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5079093620742230685L;
 	public JLabel lbTurn, lbTurnNum, lbScore, lbLevel;
 	public JLabel lbScoreNum;
 	public JLabel lbLevelNum;

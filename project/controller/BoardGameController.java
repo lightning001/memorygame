@@ -2,8 +2,6 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.Observable;
 import java.util.TimerTask;
 
 import javax.swing.ImageIcon;
@@ -15,13 +13,12 @@ import model.LevelModel;
 import model.RecordModel;
 import model.Sound;
 import view.BoardGame;
-import view.RecordView;
 import view.ShowMessage;
 
 public class BoardGameController implements ActionListener {
 	public BoardGame boardGame;
 	BoardGameModel model;
-public 	RecordController rcController;
+	public RecordController rcController;
 	ShowMessage sh = new ShowMessage(this);
 	SaveGame saveGame;
 
@@ -49,8 +46,6 @@ public 	RecordController rcController;
 
 		}
 	}
-	
-	
 
 	int c1;
 	int c2;
@@ -61,7 +56,6 @@ public 	RecordController rcController;
 	Sound sound = new Sound();
 	String name;
 	JButton[] btselected = new JButton[2];
-
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -145,7 +139,7 @@ public 	RecordController rcController;
 
 				System.out.println("total " + rcModel.getScore());
 				sound.playSound("sound\\wingame.wav");
-				 sh.showMessageWinGame();
+				sh.showMessageWinGame();
 
 			} else {
 				BonusScore bonus = new BonusScore();
@@ -197,8 +191,6 @@ public 	RecordController rcController;
 		}, 500, 500);
 	}
 
-
-
 	public void resumeBoardGame() {
 		String s = saveGame.readBoard();
 		if (s != null) {
@@ -232,7 +224,7 @@ public 	RecordController rcController;
 		String ss[] = s.split(",");
 		for (int i = 0; i < ss.length; i++) {
 			model.getSaveImages().add(Integer.parseInt(ss[i]));
-			boardGame.listBt.add(new ImageIcon("images\\hi" +ss[i] +".jpg"));
+			boardGame.listBt.add(new ImageIcon("images\\hi" + ss[i] + ".jpg"));
 		}
 	}
 
@@ -240,17 +232,11 @@ public 	RecordController rcController;
 		boardGame.initBoardGame(model.obLevel);
 		resumeBoardGame();
 		boardGame.randomImage(model);
-//		resumeImages();
+		// resumeImages();
 		boardGame.drawBoardGame(model.obLevel);
 		for (int i = 0; i < model.getLuuVtri().size(); i++) {
 			boardGame.gameBt[model.getLuuVtri().get(i)].setVisible(false);
 
-		}
-	}
-
-	public void noitifyAll() {
-		for (Observable ob : boardGame.observer_p) {
-			// ob.update();
 		}
 	}
 

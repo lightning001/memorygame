@@ -107,13 +107,14 @@ public class ShowMessage extends JInternalFrame {
 	/*
 	 * hien thong bao khi nguoi choi hoan thanh 1 lv
 	 */
+	@SuppressWarnings("unused")
 	public void showMessageCompleteLevel() {
 		int choice = JOptionPane.showOptionDialog(null, "Level complete\nNext Level", "Level Complete",
 				JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
 	}
 
 	/*
-	 * hien thong bao khi nguoi choi muon thoát khoi man hinh newgame de ve
+	 * hien thong bao khi nguoi choi muon thoï¿½t khoi man hinh newgame de ve
 	 * trang chu
 	 */
 	public static void showSaveAndBack(BoardGameModel boardModel, RecordModel rcModel, BoardGame boardGame) {
